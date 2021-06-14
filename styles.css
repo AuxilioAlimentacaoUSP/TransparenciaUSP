@@ -25,10 +25,12 @@ body {
 .note {
     line-height: 1.5;
     padding: 0 15px;
+    text-align: justify;
 }
 
 .note-title {
     color: #152039;
+    text-align: left;
 }
 
 .wrap {
