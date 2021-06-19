@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="normalize.css">
+	<link rel="stylesheet" type="text/css" href="styles2.css">
+	
+	<title>GT de Transparência</title>
+    </head>
+    <body>
+	<!-- SVG Icons Definitions -->
+	<svg aria-hidden="true" style="position: absolute; width: 0; height: 0; overflow: hidden;" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+	    <defs>
+		<symbol id="icon-facebook" viewBox="0 0 32 32">
+		    <path d="M29 0h-26c-1.65 0-3 1.35-3 3v26c0 1.65 1.35 3 3 3h13v-14h-4v-4h4v-2c0-3.306 2.694-6 6-6h4v4h-4c-1.1 0-2 0.9-2 2v2h6l-1 4h-5v14h9c1.65 0 3-1.35 3-3v-26c0-1.65-1.35-3-3-3z"></path>
+		</symbol>
+		<symbol id="icon-instagram" viewBox="0 0 32 32">
+		    <path d="M16 2.881c4.275 0 4.781 0.019 6.462 0.094 1.563 0.069 2.406 0.331 2.969 0.55 0.744 0.288 1.281 0.638 1.837 1.194 0.563 0.563 0.906 1.094 1.2 1.838 0.219 0.563 0.481 1.412 0.55 2.969 0.075 1.688 0.094 2.194 0.094 6.463s-0.019 4.781-0.094 6.463c-0.069 1.563-0.331 2.406-0.55 2.969-0.288 0.744-0.637 1.281-1.194 1.837-0.563 0.563-1.094 0.906-1.837 1.2-0.563 0.219-1.413 0.481-2.969 0.55-1.688 0.075-2.194 0.094-6.463 0.094s-4.781-0.019-6.463-0.094c-1.563-0.069-2.406-0.331-2.969-0.55-0.744-0.288-1.281-0.637-1.838-1.194-0.563-0.563-0.906-1.094-1.2-1.837-0.219-0.563-0.481-1.413-0.55-2.969-0.075-1.688-0.094-2.194-0.094-6.463s0.019-4.781 0.094-6.463c0.069-1.563 0.331-2.406 0.55-2.969 0.288-0.744 0.638-1.281 1.194-1.838 0.563-0.563 1.094-0.906 1.838-1.2 0.563-0.219 1.412-0.481 2.969-0.55 1.681-0.075 2.188-0.094 6.463-0.094zM16 0c-4.344 0-4.887 0.019-6.594 0.094-1.7 0.075-2.869 0.35-3.881 0.744-1.056 0.412-1.95 0.956-2.837 1.85-0.894 0.888-1.438 1.781-1.85 2.831-0.394 1.019-0.669 2.181-0.744 3.881-0.075 1.713-0.094 2.256-0.094 6.6s0.019 4.887 0.094 6.594c0.075 1.7 0.35 2.869 0.744 3.881 0.413 1.056 0.956 1.95 1.85 2.837 0.887 0.887 1.781 1.438 2.831 1.844 1.019 0.394 2.181 0.669 3.881 0.744 1.706 0.075 2.25 0.094 6.594 0.094s4.888-0.019 6.594-0.094c1.7-0.075 2.869-0.35 3.881-0.744 1.050-0.406 1.944-0.956 2.831-1.844s1.438-1.781 1.844-2.831c0.394-1.019 0.669-2.181 0.744-3.881 0.075-1.706 0.094-2.25 0.094-6.594s-0.019-4.887-0.094-6.594c-0.075-1.7-0.35-2.869-0.744-3.881-0.394-1.063-0.938-1.956-1.831-2.844-0.887-0.887-1.781-1.438-2.831-1.844-1.019-0.394-2.181-0.669-3.881-0.744-1.712-0.081-2.256-0.1-6.6-0.1v0z"></path>
+		    <path d="M16 7.781c-4.537 0-8.219 3.681-8.219 8.219s3.681 8.219 8.219 8.219 8.219-3.681 8.219-8.219c0-4.537-3.681-8.219-8.219-8.219zM16 21.331c-2.944 0-5.331-2.387-5.331-5.331s2.387-5.331 5.331-5.331c2.944 0 5.331 2.387 5.331 5.331s-2.387 5.331-5.331 5.331z"></path>
+		    <path d="M26.462 7.456c0 1.060-0.859 1.919-1.919 1.919s-1.919-0.859-1.919-1.919c0-1.060 0.859-1.919 1.919-1.919s1.919 0.859 1.919 1.919z"></path>
+		</symbol>
+		<symbol id="icon-twitter" viewBox="0 0 32 32">
+		    <path d="M32 7.075c-1.175 0.525-2.444 0.875-3.769 1.031 1.356-0.813 2.394-2.1 2.887-3.631-1.269 0.75-2.675 1.3-4.169 1.594-1.2-1.275-2.906-2.069-4.794-2.069-3.625 0-6.563 2.938-6.563 6.563 0 0.512 0.056 1.012 0.169 1.494-5.456-0.275-10.294-2.888-13.531-6.862-0.563 0.969-0.887 2.1-0.887 3.3 0 2.275 1.156 4.287 2.919 5.463-1.075-0.031-2.087-0.331-2.975-0.819 0 0.025 0 0.056 0 0.081 0 3.181 2.263 5.838 5.269 6.437-0.55 0.15-1.131 0.231-1.731 0.231-0.425 0-0.831-0.044-1.237-0.119 0.838 2.606 3.263 4.506 6.131 4.563-2.25 1.762-5.075 2.813-8.156 2.813-0.531 0-1.050-0.031-1.569-0.094 2.913 1.869 6.362 2.95 10.069 2.95 12.075 0 18.681-10.006 18.681-18.681 0-0.287-0.006-0.569-0.019-0.85 1.281-0.919 2.394-2.075 3.275-3.394z"></path>
+		</symbol>
+	    </defs>
+	</svg>
+	<!-- End of SVG Icons definitions -->
+ 	<main>	
+	    <header class="page-header">
+		<h1>Comitê de Luta pelo Auxílio Alimentação da USP</h1>
+	    </header>
+
+        <center><img src="images/banner-hackeaco.png" alt="Hackeaço 5.0, com fundo preto e letras verdes" class="center" width="400"></center>
+	    
+        <div class="wrap">
+		<article class="note">
+		    <h2 class="note-title">Permanência não é brincadeira! Auxílio alimentação pecuniário já!</h2>
+
+<p>O texto abaixo &eacute; uma sugest&atilde;o de email para o Hackea&ccedil;o 5.0. Ao clicar em ENVIAR, voc&ecirc; ser&aacute; direcionada para seu cliente de emails. Se tiver problemas no computador, tente novamente usando um celular.</p>
+<hr>
+
+<p>&Agrave; excelent&iacute;ssima reitoria, vice reitoria, superintend&ecirc;ncia de assist&ecirc;ncia social e a todos os membros da COP da USP.</p>
+
+<p>N&oacute;s, estudantes, estamos h&aacute; mais de um ano solicitando o aux&iacute;lio alimenta&ccedil;&atilde;o pecuni&aacute;rio. Explicamos e expomos todas as problem&aacute;ticas e limita&ccedil;&otilde;es das distribui&ccedil;&otilde;es de marmitas. Solicitamos reuni&otilde;es, enviamos of&iacute;cios e, h&aacute; 4 meses, estamos nos organizando via Comit&ecirc; de Luta pelo Auxilio Alimenta&ccedil;&atilde;o. Durante todo esse tempo, estamos sendo tratados com desprezo por reivindicar algo que deveria ser b&aacute;sico na perman&ecirc;ncia estudantil: o direito &agrave; alimenta&ccedil;&atilde;o.</p>
+
+<p>No m&ecirc;s passado, foi anunciado o acr&eacute;scimo nos aux&iacute;lios manuten&ccedil;&atilde;o/transporte e moradia que ainda n&atilde;o &eacute; o suficiente. Muitas das contempladas pelo aux&iacute;lio alimenta&ccedil;&atilde;o n&atilde;o recebem os dois benef&iacute;cios e, mesmo que recebessem, a quantia paga n&atilde;o supre as necessidades b&aacute;sicas de seguran&ccedil;a alimentar em meio &agrave; crise.</p>
+
+<p>Outro ponto, o acr&eacute;scimo foi concedido ao custo de atrasarem o pagamento dos aux&iacute;lios de maio e mudarem a data de pagamento sem aviso pr&eacute;vio. Dado que os estudantes dependem deste dinheiro para pagarem contas e subsist&ecirc;ncia, &eacute; imperativo que mudan&ccedil;as e ajustes tenham avisos pr&eacute;vio. Deste modo, todos poderiam se planejar e tentar evitar endividamentos.</p>
+
+<p>Considerando a falta de comunica&ccedil;&atilde;o pr&eacute;via e efetiva, bem como a falta de consulta discente na tomada de decis&otilde;es, solicitamos respeito e transpar&ecirc;ncia conosco - seja nos dados divulgados em nota, seja nas rela&ccedil;&otilde;es com os estudantes.</p>
+
+<p>Diante de tantos descasos envolvendo a pol&iacute;tica de perman&ecirc;ncia da USP, reinvindicamos:</p>
+
+<p>- Concess&atilde;o do aux&iacute;lio alimenta&ccedil;&atilde;o de forma pecuni&aacute;ria no valor de R$200,00 reais durante o per&iacute;odo de suspens&atilde;o do funcionamento dos Restaurantes Universit&aacute;rios; - Reativa&ccedil;&atilde;o do CGPAPFE com direito a representa&ccedil;&atilde;o discente; - Transpar&ecirc;ncia e detalhamentos dos dados envolvendo os aux&iacute;lios PAPFE, discriminando quantidade de contemplados por aux&iacute;lio, por unidade, e o or&ccedil;amento destinado e gasto com os Restaurantes Universit&aacute;rios, Aux&iacute;lios (moradia, alimenta&ccedil;&atilde;o, transporte, manuten&ccedil;&atilde;o e livro), por unidade. Todos dados a constarem no site da Superintend&ecirc;ncia de Assist&ecirc;ncial Social ou em site espec&iacute;fico para transpar&ecirc;ncia.</p>
+
+<p>Atenciosamente, Comit&ecirc; de Luta pelo Aux&iacute;lio Alimenta&ccedil;&atilde;o.</p>
+
+		</article>
+	    </div>
+
+<html>
+<body>
+
+<a href="mailto:vahan.gopyan@poli.usp.br,gsas@usp.br,hernandes@ifsc.usp.br,tomanari@usp.br,codage@usp.br,gr@usp.br,gvr@usp.br,liedi@usp.br,alcosta@usp.br,frezatti@usp.br,jb@ime.usp.br,lcsf@usp.br,linapassareli2@gmail.com,tabaniks@if.usp.br,julusa@usp.br,edesider@usp.br,auxilioalimentacaousp@gmail.com
+?subject=Perman&ecirc;ncia%20n&atilde;o%20&eacute;%20brincadeira!%20Aux&iacute;lio%20alimenta&ccedil;&atilde;o%20pecuni&aacute;rio%20j&aacute;! 
+&body=&Agrave;%20excelent&iacute;ssima%20reitoria,%20vice%20reitoria,%20superintend&ecirc;ncia%20de%20assist&ecirc;ncia%20social%20e%20a%20todos%20os%20membros%20da%20COP%20da%20USP.%0D%0A%0D%0A%0D%0A
+
+N&oacute;s,%20estudantes,%20estamos%20h&aacute;%20mais%20de%20um%20ano%20solicitando%20o%20aux&iacute;lio%20alimenta&ccedil;&atilde;o%20pecuni&aacute;rio.%20Explicamos%20e%20expomos%20todas%20as%20problem&aacute;ticas%20e%20limita&ccedil;&otilde;es%20das%20distribui&ccedil;&otilde;es%20de%20marmitas.%20Solicitamos%20reuni&otilde;es,%20enviamos%20of&iacute;cios%20e,%20h&aacute;%204%20meses,%20estamos%20nos%20organizando%20via%20Comit&ecirc;%20de%20Luta%20pelo%20Auxilio%20Alimenta&ccedil;&atilde;o.%20Durante%20todo%20esse%20tempo,%20estamos%20sendo%20tratados%20com%20desprezo%20por%20reivindicar%20algo%20que%20deveria%20ser%20b&aacute;sico%20na%20perman&ecirc;ncia%20estudantil:%20o%20direito%20&agrave;%20alimenta&ccedil;&atilde;o.%0D%0A%0D%0A
+
+No%20m&ecirc;s%20passado,%20foi%20anunciado%20o%20acr&eacute;scimo%20nos%20aux&iacute;lios%20manuten&ccedil;&atilde;o/transporte%20e%20moradia%20que%20ainda%20n&atilde;o%20&eacute;%20o%20suficiente.%20Muitas%20das%20contempladas%20pelo%20aux&iacute;lio%20alimenta&ccedil;&atilde;o%20n&atilde;o%20recebem%20os%20dois%20benef&iacute;cios%20e,%20mesmo%20que%20recebessem,%20a%20quantia%20paga%20n&atilde;o%20supre%20as%20necessidades%20b&aacute;sicas%20de%20seguran&ccedil;a%20alimentar%20em%20meio%20&agrave;%20crise.%0D%0A%0D%0A
+
+Outro%20ponto,%20o%20acr&eacute;scimo%20foi%20concedido%20ao%20custo%20de%20atrasarem%20o%20pagamento%20dos%20aux&iacute;lios%20de%20maio%20e%20mudarem%20a%20data%20de%20pagamento%20sem%20aviso%20pr&eacute;vio.%20Dado%20que%20os%20estudantes%20dependem%20deste%20dinheiro%20para%20pagarem%20contas%20e%20subsist&ecirc;ncia,%20&eacute;%20imperativo%20que%20mudan&ccedil;as%20e%20ajustes%20tenham%20avisos%20pr&eacute;vio.%20Deste%20modo,%20todos%20poderiam%20se%20planejar%20e%20tentar%20evitar%20endividamentos.%0D%0A%0D%0A
+
+Considerando%20a%20falta%20de%20comunica&ccedil;&atilde;o%20pr&eacute;via%20e%20efetiva,%20bem%20como%20a%20falta%20de%20consulta%20discente%20na%20tomada%20de%20decis&otilde;es,%20solicitamos%20respeito%20e%20transpar&ecirc;ncia%20conosco%20-%20seja%20nos%20dados%20divulgados%20em%20nota,%20seja%20nas%20rela&ccedil;&otilde;es%20com%20os%20estudantes.%0D%0A%0D%0A
+
+Diante%20de%20tantos%20descasos%20envolvendo%20a%20pol&iacute;tica%20de%20perman&ecirc;ncia%20da%20USP,%20reinvindicamos:%0D%0A%0D%0A
+
+-%20Concess&atilde;o%20do%20aux&iacute;lio%20alimenta&ccedil;&atilde;o%20de%20forma%20pecuni&aacute;ria%20no%20valor%20de%20R$200,00%20reais%20durante%20o%20per&iacute;odo%20de%20suspens&atilde;o%20do%20funcionamento%20dos%20Restaurantes%20Universit&aacute;rios;%0D%0A
+-%20Reativa&ccedil;&atilde;o%20do%20CGPAPFE%20com%20direito%20a%20representa&ccedil;&atilde;o%20discente;%0D%0A
+-%20Transpar&ecirc;ncia%20e%20detalhamentos%20dos%20dados%20envolvendo%20os%20aux&iacute;lios%20PAPFE,%20discriminando%20quantidade%20de%20contemplados%20por%20aux&iacute;lio,%20por%20unidade,%20e%20o%20or&ccedil;amento%20destinado%20e%20gasto%20com%20os%20Restaurantes%20Universit&aacute;rios,%20Aux&iacute;lios%20(moradia,%20alimenta&ccedil;&atilde;o,%20transporte,%20manuten&ccedil;&atilde;o%20e%20livro),%20por%20unidade.%20Todos%20dados%20a%20constarem%20no%20site%20da%20Superintend&ecirc;ncia%20de%20Assist&ecirc;ncial%20Social%20ou%20em%20site%20espec&iacute;fico%20para%20transpar&ecirc;ncia.%0D%0A%0D%0A
+
+Atenciosamente,%0D%0AComit&ecirc;%20de%20Luta%20pelo%20Aux&iacute;lio%20Alimenta&ccedil;&atilde;o.">
+
+<center><img src="images/enviar.png" alt="Botão para enviar emails, com o texto enviar, de cor verde e fundo preto" class="center" width="300"></center> </a>
+
+</body>
+</html>	
+
+        <footer class="page-footer">
+		<div class="wrap">
+		    <ul class="social-media-links">
+			<li>
+			    <a href="https://facebook.com/alimentacaonausp/">
+				<svg class="icon"><use xlink:href="#icon-facebook"></use></svg>
+			    </a>
+			</li>
+			<li>
+			    <a href="https://www.instagram.com/alimentacaonausp/">
+				<svg class="icon"><use xlink:href="#icon-instagram"></use></svg>
+			    </a>
+			</li>
+			<li>
+			    <a href="https://twitter.com/AlimentacaoUsp/">
+				<svg class="icon"><use xlink:href="#icon-twitter"></use></svg>
+			    </a>
+			</li>
+		    </ul>
+		</div>
+	    </footer>
+	</main>
+    </body>
+</html>
