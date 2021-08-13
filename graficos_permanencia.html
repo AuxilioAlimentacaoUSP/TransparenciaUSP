@@ -432,6 +432,13 @@
 					<canvas id="auxlChart"></canvas>
 				</div>
 			</div>
+			<div class="grafic7">
+				<h3>Gráfico comparativo entre a quantidade de contemplados e pleiteantes ao auxílio manutenção na série histórica 2016 - 2020</h3>
+				<p>No ano de 2021 não há valor para contemplados, pois não foi fornecido. Todos os dados foram fornecidos pela Divisão de Promoção Social da SAS através do Serviço de Informação ao Cidadão.</p>
+				<div class="chartBox">
+					<canvas id="auxmanChart"></canvas>
+				</div>
+			</div>
 		</div>
 		  
 			  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.0.0/d3.min.js" integrity="sha512-0x7/VCkKLLt4wnkFqI8Cgv6no+AaS1TDgmHLOoU3hy/WVtYta2J6gnOIHhYYDJlDxPqEqAYLPS4gzVex4mGJLw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
@@ -675,6 +682,39 @@
 						}
 					}
 				});
+				  
+				const ctx7 = document.getElementById('auxmanChart').getContext('2d');
+				const auxmanChart = new Chart(ctx7, {
+					data: {
+						datasets: [{
+							type: 'line',
+							label: 'Contemplados',
+							data: [753, 892, 987, 958, 427],
+							backgroundColor: [
+								'#f40000',
+							],
+							borderColor: [
+								'#f40000'
+							],
+							borderWidth: 2
+							},{
+							type: 'bar',
+							label: 'Pleiteantes',
+							data: [954, 1385, 1440, 1331, 530],
+							backgroundColor: [
+								'#152039',
+							]
+						}],
+						labels: ['2016', '2017', '2018', '2019', '2020', '2021'],
+					},
+					options: {
+						scales: {
+							y: {
+								beginAtZero: true
+							}
+						}
+					}
+				});  
 		
 				const list0 = [
 					{sas: '5, 4, 5, 15, 25, 27, 27, 19', anuario: '5, 10, 11, 25, 45, 57, 71, 60'},
@@ -990,8 +1030,7 @@
 					{contemplados: '2,3,3,3,3,3,2,3,2', pleiteantes: '8,14,15,16,23,27,26,36,22,30'},
 					{contemplados: '0,1,1,3,1,1,2,0,0', pleiteantes: '13,20,16,20,14,8,10,7,1,9'},
 				];
-		
-		
+				  
 				const aux = document.getElementById('aux');
 				aux.addEventListener('change', auxTracker);
 		
